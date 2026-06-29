@@ -10,7 +10,7 @@ import {
   Lock,
   Check,
   ArrowRight,
-  Sparkles,
+  
   Store,
   Briefcase,
   Stethoscope,
@@ -124,10 +124,6 @@ function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-28">
         <div>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/70 px-3.5 py-1.5 text-xs font-medium text-emerald-900 shadow-sm backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5" style={{ color: "var(--saffron)" }} />
-            AI explains · the engine calculates · you verify
-          </div>
 
           <h1 className="text-balance text-5xl font-extrabold tracking-tight text-[color:var(--ink)] sm:text-6xl md:text-[68px] md:leading-[1.02]">
             Your CA,
@@ -222,11 +218,6 @@ function Hero() {
       {/* trust strip */}
       <div className="relative border-t border-emerald-900/10 bg-white/50 backdrop-blur">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-4 text-sm md:flex-row">
-          <div className="text-slate-700">
-            <b className="text-[color:var(--ink)]">AI explains</b> ·{" "}
-            <b className="text-[color:var(--ink)]">the engine calculates</b> ·{" "}
-            <b className="text-[color:var(--ink)]">you verify</b>
-          </div>
           <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
             <TrustPill>FY 2025–26 compliant</TrustPill>
             <TrustPill>DPDP-ready</TrustPill>
