@@ -698,20 +698,22 @@ type Bubble = {
   hi?: boolean;
   top: string;
   left: string;
+  mdLeftClass?: string;
   rot: number;
   delay: number;
   accent?: "teal" | "saffron" | "wa" | "ink";
+  hideOnMobile?: boolean;
 };
 
 const BUBBLES: Bubble[] = [
-  { text: "GST kab bharna hai?", top: "6%", left: "1%", rot: -6, delay: 0, accent: "wa" },
-  { text: "Duplicate bill मिला 🚨", hi: true, top: "30%", left: "0%", rot: -3, delay: 1.8, accent: "teal" },
-  { text: "Advance tax due date?", top: "54%", left: "1%", rot: 6, delay: 0.3, accent: "ink" },
-  { text: "ITR file karna hai", hi: true, top: "78%", left: "2%", rot: 4, delay: 1.5, accent: "saffron" },
-  { text: "नमस्ते TaxEasy 👋", hi: true, top: "6%", left: "82%", rot: 5, delay: 0.6, accent: "saffron" },
-  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "30%", left: "82%", rot: -4, delay: 1.2, accent: "teal" },
-  { text: "GSTR-3B reminder", top: "54%", left: "84%", rot: 5, delay: 2.1, accent: "ink" },
-  { text: "Old vs new regime — kaunsa?", top: "78%", left: "80%", rot: -7, delay: 0.9, accent: "wa" },
+  { text: "GST kab bharna hai?", top: "4%", left: "2%", rot: -6, delay: 0, accent: "wa" },
+  { text: "Duplicate bill मिला 🚨", hi: true, top: "26%", left: "1%", rot: -3, delay: 1.8, accent: "teal", hideOnMobile: true },
+  { text: "Advance tax due date?", top: "52%", left: "2%", rot: 6, delay: 0.3, accent: "ink" },
+  { text: "ITR file karna hai", hi: true, top: "82%", left: "3%", rot: 4, delay: 1.5, accent: "saffron", hideOnMobile: true },
+  { text: "नमस्ते TaxEasy 👋", hi: true, top: "4%", left: "62%", mdLeftClass: "md:left-[82%]", rot: 5, delay: 0.6, accent: "saffron" },
+  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "26%", left: "58%", mdLeftClass: "md:left-[82%]", rot: -4, delay: 1.2, accent: "teal", hideOnMobile: true },
+  { text: "GSTR-3B reminder", top: "52%", left: "64%", mdLeftClass: "md:left-[84%]", rot: 5, delay: 2.1, accent: "ink" },
+  { text: "Old vs new regime — kaunsa?", top: "82%", left: "55%", mdLeftClass: "md:left-[80%]", rot: -7, delay: 0.9, accent: "wa", hideOnMobile: true },
 ];
 
 function bubbleStyle(a: Bubble["accent"]) {
@@ -729,9 +731,10 @@ function bubbleStyle(a: Bubble["accent"]) {
 
 function FloatingBubble({ b }: { b: Bubble }) {
   const s = bubbleStyle(b.accent);
+  const visibility = b.hideOnMobile ? "hidden md:block" : "block";
   return (
     <div
-      className="float-bubble absolute hidden select-none rounded-2xl px-3 py-2 text-xs font-medium backdrop-blur sm:px-4 sm:py-2.5 sm:text-sm md:block"
+      className={`float-bubble absolute select-none rounded-2xl px-2.5 py-1.5 text-[11px] font-medium backdrop-blur sm:px-4 sm:py-2.5 sm:text-sm ${visibility} ${b.mdLeftClass ?? ""}`}
       style={
         {
           top: b.top,
@@ -775,7 +778,7 @@ function Outro() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-28 md:py-36">
+      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:py-24 md:py-36">
         {/* big stacked wordmark */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-10 hidden md:block">
           <div
@@ -805,7 +808,7 @@ function Outro() {
         {/* mobile wordmark */}
         <div aria-hidden className="pointer-events-none absolute inset-0 grid place-items-center md:hidden">
           <div
-            className="hero-word select-none text-center text-[clamp(80px,28vw,160px)]"
+            className="hero-word select-none text-center text-[clamp(64px,22vw,140px)]"
             style={{ color: "var(--whatsapp)" }}
           >
             TaxEasy
@@ -813,11 +816,11 @@ function Outro() {
         </div>
 
         {/* floating queries */}
-        <div className="pointer-events-none absolute inset-0 hidden md:block">
+        <div className="pointer-events-none absolute inset-0 block">
           {BUBBLES.map((b, i) => (
             <FloatingBubble key={i} b={b} />
           ))}
-          <svg className="absolute inset-0 h-full w-full" aria-hidden>
+          <svg className="absolute inset-0 hidden h-full w-full md:block" aria-hidden>
             <path
               d="M 50 100 Q 400 40 760 160"
               stroke="rgba(37,211,102,0.35)"
