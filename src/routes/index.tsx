@@ -808,7 +808,7 @@ function Outro() {
         {/* mobile wordmark */}
         <div aria-hidden className="pointer-events-none absolute inset-0 grid place-items-center md:hidden">
           <div
-            className="hero-word select-none text-center text-[clamp(80px,28vw,160px)]"
+            className="hero-word select-none text-center text-[clamp(64px,22vw,140px)]"
             style={{ color: "var(--whatsapp)" }}
           >
             TaxEasy
