@@ -719,14 +719,16 @@ type Bubble = {
 };
 
 const BUBBLES: Bubble[] = [
-  { text: "GST kab bharna hai?", top: "4%", left: "2%", rot: -6, delay: 0, accent: "wa" },
-  { text: "Duplicate bill मिला 🚨", hi: true, top: "26%", left: "1%", rot: -3, delay: 1.8, accent: "teal", hideOnMobile: true },
-  { text: "Advance tax due date?", top: "52%", left: "2%", rot: 6, delay: 0.3, accent: "ink" },
-  { text: "ITR file karna hai", hi: true, top: "82%", left: "3%", rot: 4, delay: 1.5, accent: "saffron", hideOnMobile: true },
-  { text: "नमस्ते TaxEasy 👋", hi: true, top: "4%", left: "62%", mdLeftClass: "md:left-[82%]", rot: 5, delay: 0.6, accent: "saffron" },
-  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "26%", left: "58%", mdLeftClass: "md:left-[82%]", rot: -4, delay: 1.2, accent: "teal", hideOnMobile: true },
-  { text: "GSTR-3B reminder", top: "52%", left: "64%", mdLeftClass: "md:left-[84%]", rot: 5, delay: 2.1, accent: "ink" },
-  { text: "Old vs new regime — kaunsa?", top: "82%", left: "55%", mdLeftClass: "md:left-[80%]", rot: -7, delay: 0.9, accent: "wa", hideOnMobile: true },
+  // ── left edge: top + bottom corners (clear of the centre wordmark) ──
+  { text: "GST kab bharna hai?", top: "4%", left: "0%", rot: -6, delay: 0, accent: "wa" },
+  { text: "Duplicate bill मिला 🚨", hi: true, top: "18%", left: "0%", rot: -3, delay: 1.8, accent: "teal", hideOnMobile: true },
+  { text: "Advance tax due date?", top: "74%", left: "0%", rot: 6, delay: 0.3, accent: "ink" },
+  { text: "ITR file karna hai", hi: true, top: "88%", left: "1%", rot: 4, delay: 1.5, accent: "saffron", hideOnMobile: true },
+  // ── right edge: top + bottom corners ──
+  { text: "नमस्ते TaxEasy 👋", hi: true, top: "4%", left: "60%", mdLeftClass: "md:left-[84%]", rot: 5, delay: 0.6, accent: "saffron" },
+  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "18%", left: "56%", mdLeftClass: "md:left-[80%]", rot: -4, delay: 1.2, accent: "teal", hideOnMobile: true },
+  { text: "GSTR-3B reminder", top: "74%", left: "66%", mdLeftClass: "md:left-[85%]", rot: 5, delay: 2.1, accent: "ink" },
+  { text: "Old vs new regime — kaunsa?", top: "88%", left: "55%", mdLeftClass: "md:left-[80%]", rot: -7, delay: 0.9, accent: "wa", hideOnMobile: true },
 ];
 
 function bubbleStyle(a: Bubble["accent"]) {
@@ -801,7 +803,7 @@ function Outro() {
             TaxEasy
           </div>
         </div>
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-1/2 hidden -translate-y-1/2 md:block">
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-1/2 z-10 hidden -translate-y-1/2 md:block">
           <div
             className="hero-word select-none text-center text-[clamp(140px,20vw,300px)]"
             style={{ color: "var(--whatsapp)" }}
@@ -819,7 +821,7 @@ function Outro() {
         </div>
 
         {/* mobile wordmark */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 grid place-items-center md:hidden">
+        <div aria-hidden className="pointer-events-none absolute inset-0 z-10 grid place-items-center md:hidden">
           <div
             className="hero-word select-none text-center text-[clamp(64px,22vw,140px)]"
             style={{ color: "var(--whatsapp)" }}
