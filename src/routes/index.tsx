@@ -300,48 +300,43 @@ function Hero() {
           </div>
 
           {/* Foreground content */}
-          <div className="relative mx-auto grid items-center gap-10 md:grid-cols-2">
-            <div className="text-center md:pt-28 md:text-left">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">
-                <Sparkles className="h-3.5 w-3.5 text-amber-300" />
-                AI explains · the engine calculates · you verify
-              </div>
-              <h1 className="text-balance text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-                Your CA, now on{" "}
-                <span style={{ color: "var(--whatsapp)" }}>WhatsApp.</span>
-              </h1>
-              <p
-                className="font-hi mt-3 text-lg text-white/85 sm:text-xl"
-                style={{ color: "rgba(245,158,11,0.95)" }}
+          <div className="relative mx-auto max-w-3xl py-16 text-center md:py-24">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">
+              <Sparkles className="h-3.5 w-3.5 text-amber-300" />
+              AI explains · the engine calculates · you verify
+            </div>
+            <h1 className="text-balance text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
+              Your CA, now on{" "}
+              <span style={{ color: "var(--whatsapp)" }}>WhatsApp.</span>
+            </h1>
+            <p
+              className="font-hi mt-4 text-xl sm:text-2xl"
+              style={{ color: "rgba(245,158,11,0.95)" }}
+            >
+              हर बिज़नेस का अपना CA — आपकी जेब में।
+            </p>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+              Tax, GST और bills की हर मुश्किल — एक message दूर। Hindi, Hinglish या English,
+              जिस भी language में आप comfortable हो।
+            </p>
+
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <WhatsAppBtn size="lg">Start on WhatsApp · ₹0</WhatsAppBtn>
+              <a
+                href="#how"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white/90 hover:bg-white/5"
               >
-                हर बिज़नेस का अपना CA — आपकी जेब में।
-              </p>
-              <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/70 md:mx-0">
-                Tax, GST और bills की हर मुश्किल — एक message दूर। Hindi, Hinglish या English,
-                जिस भी language में आप comfortable हो।
-              </p>
-
-              <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
-                <WhatsAppBtn size="lg">Start on WhatsApp · ₹0</WhatsAppBtn>
-                <a
-                  href="#how"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white/90 hover:bg-white/5"
-                >
-                  See how it works <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-[11px] text-white/60 md:justify-start">
-                <Chip>FY 2025–26 compliant</Chip>
-                <Chip>DPDP-ready</Chip>
-                <Chip>Data stays in India 🇮🇳</Chip>
-              </div>
+                See how it works <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
 
-            <div className="md:pt-24">
-              <HeroChatPhone />
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-2 text-[11px] text-white/60">
+              <Chip>FY 2025–26 compliant</Chip>
+              <Chip>DPDP-ready</Chip>
+              <Chip>Data stays in India 🇮🇳</Chip>
             </div>
           </div>
+
         </div>
       </div>
     </section>
