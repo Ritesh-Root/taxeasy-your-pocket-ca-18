@@ -842,16 +842,6 @@ function Outro() {
           </svg>
         </div>
 
-        {/* foreground call */}
-        <div className="relative mx-auto max-w-2xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80">
-            <Sparkles className="h-3.5 w-3.5 text-amber-300" />
-            Ask anything · in any language
-          </div>
-          <div className="mt-8 flex justify-center">
-            <WhatsAppBtn size="lg">Start on WhatsApp · ₹0</WhatsAppBtn>
-          </div>
-        </div>
       </div>
     </section>
   );
