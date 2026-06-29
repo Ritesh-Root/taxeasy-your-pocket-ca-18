@@ -778,7 +778,7 @@ function Outro() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-28 md:py-36">
+      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:py-24 md:py-36">
         {/* big stacked wordmark */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-10 hidden md:block">
           <div
