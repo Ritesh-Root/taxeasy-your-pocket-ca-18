@@ -734,7 +734,7 @@ function FloatingBubble({ b }: { b: Bubble }) {
   const visibility = b.hideOnMobile ? "hidden md:block" : "block";
   return (
     <div
-      className={`float-bubble absolute select-none rounded-2xl px-2.5 py-1.5 text-[11px] font-medium backdrop-blur sm:px-4 sm:py-2.5 sm:text-sm ${visibility}`}
+      className={`float-bubble absolute select-none rounded-2xl px-2.5 py-1.5 text-[11px] font-medium backdrop-blur sm:px-4 sm:py-2.5 sm:text-sm ${visibility} ${b.mdLeftClass ?? ""}`}
       style={
         {
           top: b.top,
@@ -746,7 +746,6 @@ function FloatingBubble({ b }: { b: Bubble }) {
           boxShadow: "0 10px 30px -10px rgba(0,0,0,0.5)",
           ["--rot" as any]: `${b.rot}deg`,
           animationDelay: `${b.delay}s`,
-          ["--md-left" as any]: b.mdLeft ?? b.left,
         } as React.CSSProperties
       }
     >
