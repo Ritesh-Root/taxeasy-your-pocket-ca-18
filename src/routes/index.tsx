@@ -860,13 +860,258 @@ function Footer() {
   );
 }
 
+/* ---------- Global Reach (light section, ref-matched) ---------- */
+
+function GlobalReach() {
+  const countries = [
+    { flag: "🇮🇳", name: "India", live: true },
+    { flag: "🇺🇸", name: "USA" },
+    { flag: "🇬🇧", name: "UK" },
+    { flag: "🇦🇪", name: "UAE" },
+    { flag: "🇨🇦", name: "Canada" },
+    { flag: "🇸🇬", name: "Singapore" },
+    { flag: "🇦🇺", name: "Australia" },
+  ];
+  return (
+    <section
+      className="relative overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(115deg, #FBF8F1 0%, #F2F8EC 45%, #DDF1D6 100%)",
+      }}
+    >
+      {/* soft glows */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(40% 50% at 90% 60%, rgba(37,211,102,0.18), transparent 70%), radial-gradient(35% 40% at 8% 20%, rgba(245,158,11,0.10), transparent 70%)",
+        }}
+      />
+
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-28">
+        <div>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/70 px-3.5 py-1.5 text-xs font-medium text-emerald-900 shadow-sm backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5" style={{ color: "var(--saffron)" }} />
+            AI explains · the engine calculates · you verify
+          </div>
+
+          <h2 className="text-balance text-5xl font-extrabold tracking-tight text-[color:var(--ink)] sm:text-6xl md:text-[68px] md:leading-[1.02]">
+            Your CA,
+            <br />
+            <span className="relative inline-block">
+              <span className="relative z-10">now on WhatsApp.</span>
+              <span
+                aria-hidden
+                className="absolute inset-x-0 bottom-1 -z-0 h-3 rounded-sm md:bottom-2 md:h-4"
+                style={{ background: "rgba(245,158,11,0.45)" }}
+              />
+            </span>
+          </h2>
+
+          <p
+            className="font-hi mt-5 text-2xl font-semibold sm:text-3xl"
+            style={{ color: "var(--teal-deep)" }}
+          >
+            हर बिज़नेस का अपना CA।
+          </p>
+
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-700 sm:text-lg">
+            <span className="font-hi">Tax, GST और bills की हर उलझन का जवाब — आपकी भाषा में, सीधे WhatsApp पर।</span>{" "}
+            No app, no jargon. Just message and ask.{" "}
+            <b className="text-[color:var(--ink)]">Live in India 🇮🇳</b>, expanding worldwide 🌏.
+          </p>
+
+          {/* country picker */}
+          <div className="mt-8">
+            <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-emerald-900/70">
+              🌐 Choose your country
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {countries.map((c) => (
+                <button
+                  key={c.name}
+                  type="button"
+                  className={`group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                    c.live
+                      ? "border-transparent text-white shadow-md shadow-emerald-900/20"
+                      : "border-emerald-900/10 bg-white/80 text-slate-700 hover:bg-white"
+                  }`}
+                  style={c.live ? { background: "var(--whatsapp-dark)" } : undefined}
+                >
+                  <span className="text-base leading-none">{c.flag}</span>
+                  {c.name}
+                  {c.live && (
+                    <span className="rounded-full bg-white/20 px-1.5 py-0.5 text-[10px] font-bold tracking-wider">
+                      LIVE
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
+            <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-amber-100/60 px-3 py-1.5 text-sm text-amber-900">
+              ✅ <span><b>Live in India</b> — start free on WhatsApp below 👇</span>
+            </div>
+          </div>
+
+          {/* CTAs */}
+          <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+            <WhatsAppBtn size="lg">Start on WhatsApp</WhatsAppBtn>
+            <a
+              href="#how"
+              className="inline-flex items-center gap-2 rounded-full border border-emerald-900/15 bg-white px-6 py-3.5 text-sm font-semibold text-[color:var(--ink)] hover:bg-emerald-50"
+            >
+              See how it works <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-600">
+            <span className="inline-flex items-center gap-1.5">
+              <Check className="h-4 w-4" style={{ color: "var(--whatsapp-dark)" }} /> Free to start
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Check className="h-4 w-4" style={{ color: "var(--whatsapp-dark)" }} /> No app to download
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Check className="h-4 w-4" style={{ color: "var(--whatsapp-dark)" }} /> Hindi · Hinglish · English
+            </span>
+          </div>
+        </div>
+
+        {/* Phone mockup */}
+        <div className="mx-auto w-full max-w-sm">
+          <GstChatPhone />
+        </div>
+      </div>
+
+      {/* bottom trust strip */}
+      <div className="relative border-t border-emerald-900/10 bg-white/50 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-4 text-sm md:flex-row">
+          <div className="text-slate-700">
+            <b className="text-[color:var(--ink)]">AI explains</b> ·{" "}
+            <b className="text-[color:var(--ink)]">the engine calculates</b> ·{" "}
+            <b className="text-[color:var(--ink)]">you verify</b>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
+            <TrustPill>FY 2025–26 compliant</TrustPill>
+            <TrustPill>DPDP-ready</TrustPill>
+            <TrustPill>Data stays in India</TrustPill>
+            <TrustPill>Bank-grade encryption</TrustPill>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TrustPill({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-900/10 bg-white px-2.5 py-1 text-slate-700">
+      <ShieldCheck className="h-3.5 w-3.5" style={{ color: "var(--teal)" }} />
+      {children}
+    </span>
+  );
+}
+
+function GstChatPhone() {
+  return (
+    <div className="relative">
+      <div
+        aria-hidden
+        className="absolute -inset-6 -z-10 rounded-[3rem] opacity-70 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(60% 50% at 50% 50%, rgba(37,211,102,0.35), transparent 70%)",
+        }}
+      />
+      <div className="rounded-[2.5rem] border border-emerald-900/10 bg-white p-2 shadow-2xl shadow-emerald-900/20">
+        <div className="overflow-hidden rounded-[2rem]" style={{ background: "#EDE8DE" }}>
+          {/* header */}
+          <div
+            className="flex items-center gap-3 px-4 py-4"
+            style={{ background: "var(--teal-deep)" }}
+          >
+            <span className="absolute left-1/2 top-2 h-1.5 w-20 -translate-x-1/2 rounded-full bg-black/40" />
+            <div
+              className="grid h-10 w-10 place-items-center rounded-full text-base font-bold text-white"
+              style={{ background: "linear-gradient(135deg,var(--teal),var(--whatsapp))" }}
+            >
+              ₹
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-sm font-semibold text-white">TaxEasy</div>
+              <div className="font-hi text-[11px] text-emerald-100/85">
+                online · आपकी मदद के लिए
+              </div>
+            </div>
+          </div>
+
+          {/* chat */}
+          <div className="space-y-2.5 px-3 py-4" style={{ minHeight: 420 }}>
+            <div className="flex justify-end">
+              <div className="font-hi rounded-2xl rounded-br-sm bg-[#DCF8C6] px-3 py-2 text-[12.5px] text-slate-900 shadow-sm">
+                नमस्ते 👋
+              </div>
+            </div>
+            <div className="flex justify-start">
+              <div className="font-hi max-w-[85%] rounded-2xl rounded-bl-sm bg-white px-3 py-2 text-[12.5px] leading-snug text-slate-900 shadow-sm">
+                👋 TaxEasy में आपका स्वागत है! मैं आपकी tax, GST और bills की मदद करूँगा।
+              </div>
+            </div>
+            <div className="flex justify-end">
+              <div className="font-hi max-w-[85%] rounded-2xl rounded-br-sm bg-[#DCF8C6] px-3 py-2 text-[12.5px] leading-snug text-slate-900 shadow-sm">
+                मेरी इस महीने की sale ₹4.2 लाख है, GST कितना देना है?
+              </div>
+            </div>
+            <div className="flex justify-start">
+              <div className="max-w-[88%] rounded-2xl rounded-bl-sm bg-white px-3 py-2.5 text-[12.5px] leading-snug text-slate-900 shadow-sm">
+                <div className="font-hi text-slate-700">आपकी GST liability (18% slab):</div>
+                <div className="mt-1 text-xl font-extrabold tracking-tight text-[color:var(--teal-deep)]">
+                  ₹ 75,600
+                </div>
+                <div className="font-hi mt-1 text-[11px] text-slate-500">
+                  Due: 20th · Input credit के बाद कम हो सकता है
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-start">
+              <div className="max-w-[88%] rounded-2xl rounded-bl-sm border border-amber-200 bg-amber-50 px-3 py-2 text-[12.5px] text-slate-900 shadow-sm">
+                <div className="flex items-center gap-1.5 text-[11px] font-semibold text-amber-700">
+                  <Bell className="h-3 w-3" /> Reminder
+                </div>
+                <div className="mt-0.5">GSTR-3B due in 6 days. Want me to prep it?</div>
+              </div>
+            </div>
+          </div>
+
+          {/* input */}
+          <div className="flex items-center gap-2 border-t border-black/5 bg-white px-3 py-2.5">
+            <div className="flex-1 rounded-full bg-slate-100 px-3 py-2 text-[12px] text-slate-400">
+              Type a message…
+            </div>
+            <button
+              type="button"
+              className="grid h-9 w-9 place-items-center rounded-full text-white"
+              style={{ background: "var(--whatsapp)" }}
+              aria-label="Send"
+            >
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Landing() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <main>
         <Hero />
-        <TrustStrip />
+        <GlobalReach />
         <HowItWorks />
         <Features />
         <Personas />
