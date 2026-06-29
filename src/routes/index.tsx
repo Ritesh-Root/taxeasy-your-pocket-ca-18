@@ -713,14 +713,14 @@ type Bubble = {
 };
 
 const BUBBLES: Bubble[] = [
-  { text: "GST kab bharna hai?", top: "6%", left: "5%", rot: -6, delay: 0, accent: "wa" },
-  { text: "नमस्ते TaxEasy 👋", hi: true, top: "10%", left: "70%", rot: 5, delay: 0.6, accent: "saffron" },
-  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "30%", left: "78%", rot: -4, delay: 1.2, accent: "teal" },
-  { text: "Advance tax due date?", top: "62%", left: "4%", rot: 6, delay: 0.3, accent: "ink" },
-  { text: "Old vs new regime — kaunsa?", top: "70%", left: "72%", rot: -7, delay: 0.9, accent: "wa" },
-  { text: "ITR file karna hai", hi: true, top: "85%", left: "32%", rot: 4, delay: 1.5, accent: "saffron" },
-  { text: "Duplicate bill मिला 🚨", hi: true, top: "40%", left: "2%", rot: -3, delay: 1.8, accent: "teal" },
-  { text: "GSTR-3B reminder", top: "52%", left: "82%", rot: 5, delay: 2.1, accent: "ink" },
+  { text: "GST kab bharna hai?", top: "4%", left: "1%", rot: -6, delay: 0, accent: "wa" },
+  { text: "नमस्ते TaxEasy 👋", hi: true, top: "8%", left: "82%", rot: 5, delay: 0.6, accent: "saffron" },
+  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "28%", left: "86%", rot: -4, delay: 1.2, accent: "teal" },
+  { text: "Advance tax due date?", top: "66%", left: "0%", rot: 6, delay: 0.3, accent: "ink" },
+  { text: "Old vs new regime — kaunsa?", top: "72%", left: "84%", rot: -7, delay: 0.9, accent: "wa" },
+  { text: "ITR file karna hai", hi: true, top: "92%", left: "6%", rot: 4, delay: 1.5, accent: "saffron" },
+  { text: "Duplicate bill मिला 🚨", hi: true, top: "38%", left: "-2%", rot: -3, delay: 1.8, accent: "teal" },
+  { text: "GSTR-3B reminder", top: "54%", left: "88%", rot: 5, delay: 2.1, accent: "ink" },
 ];
 
 function bubbleStyle(a: Bubble["accent"]) {
