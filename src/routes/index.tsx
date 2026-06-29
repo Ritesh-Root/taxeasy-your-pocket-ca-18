@@ -10,7 +10,8 @@ import {
   Lock,
   Check,
   ArrowRight,
-  
+  Linkedin,
+  ExternalLink,
   Store,
   Briefcase,
   Stethoscope,
@@ -18,6 +19,7 @@ import {
   Camera,
   Truck,
 } from "lucide-react";
+import founderImg from "../assets/founder.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,7 +40,9 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const WA = "#"; // placeholder WhatsApp link
+const WA =
+  "https://wa.me/918235479138?text=" +
+  encodeURIComponent("Hi TaxEasy! I'd like to get started.");
 
 /* ---------- Buttons ---------- */
 
@@ -528,7 +532,7 @@ function Pricing() {
       name: "Pro",
       price: "₹1,999",
       per: "/ year",
-      altPrice: "or ₹249 / month",
+      altPrice: "or ₹199 / month",
       sub: "most popular",
       features: [
         "Full tax engine (old vs new)",
@@ -669,12 +673,11 @@ function Founder() {
         <SectionTitle eyebrow="Meet the founder" title="Built by one, for the millions." />
         <div className="mt-10 rounded-3xl border border-emerald-900/10 bg-white p-6 shadow-sm sm:p-10">
           <div className="grid items-center gap-8 sm:grid-cols-[160px_1fr]">
-            <div
-              className="mx-auto grid h-32 w-32 place-items-center rounded-2xl text-4xl font-bold text-white sm:h-40 sm:w-40"
-              style={{ background: "linear-gradient(135deg, var(--teal), var(--saffron))" }}
-            >
-              R
-            </div>
+            <img
+              src={founderImg}
+              alt="Ritesh — Founder of TaxEasy"
+              className="mx-auto h-32 w-32 rounded-2xl object-cover shadow-md sm:h-40 sm:w-40"
+            />
             <div>
               <div className="text-xl font-bold text-[color:var(--ink)]">Ritesh</div>
               <div className="text-sm text-slate-600">Founder · TaxEasy</div>
@@ -683,6 +686,16 @@ function Founder() {
                 मिलनी चाहिए. एक AI-native CA जो आपकी language बोले, deadlines से पहले yaad
                 dilaaye, और कभी गलत number ना दे. That's the promise.
               </p>
+              <a
+                href="https://www.linkedin.com/in/riteshhoon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-900/15 bg-white px-4 py-2 text-sm font-semibold text-[color:var(--ink)] transition hover:bg-emerald-50"
+              >
+                <Linkedin className="h-4 w-4" style={{ color: "#0A66C2" }} />
+                Connect on LinkedIn
+                <ExternalLink className="h-3 w-3 text-slate-400" />
+              </a>
             </div>
           </div>
         </div>
@@ -865,21 +878,21 @@ function Footer() {
           <div>
             <div className="text-sm font-semibold text-[color:var(--ink)]">Company</div>
             <ul className="mt-3 space-y-2 text-sm text-slate-600">
-              <li><a href="#" className="hover:text-[color:var(--ink)]">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-[color:var(--ink)]">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-[color:var(--ink)]">Refund Policy</a></li>
+              <li><a href="/privacy" className="hover:text-[color:var(--ink)]">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-[color:var(--ink)]">Terms of Service</a></li>
+              <li><a href="/terms" className="hover:text-[color:var(--ink)]">Refund Policy</a></li>
             </ul>
           </div>
           <div>
             <div className="text-sm font-semibold text-[color:var(--ink)]">Contact</div>
             <ul className="mt-3 space-y-2 text-sm text-slate-600">
               <li>
-                <a href="mailto:support@taxeasy.in" className="hover:text-[color:var(--ink)]">
-                  support@taxeasy.in
+                <a href="mailto:support@taxeasy.dev" className="hover:text-[color:var(--ink)]">
+                  support@taxeasy.dev
                 </a>
               </li>
               <li>
-                <a href="mailto:grievance@taxeasy.in" className="hover:text-[color:var(--ink)]">
+                <a href="mailto:grievance@taxeasy.dev" className="hover:text-[color:var(--ink)]">
                   Grievance Officer
                 </a>
               </li>

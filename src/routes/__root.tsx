@@ -83,10 +83,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "TaxEasy — Your CA, now on WhatsApp" },
       { property: "og:description", content: "हर बिज़नेस का अपना CA. Tax, GST & bills help in your language on WhatsApp." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://taxeasy.dev/" },
+      { property: "og:image", content: "https://taxeasy.dev/og.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://taxeasy.dev/og.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
