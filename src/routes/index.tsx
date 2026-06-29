@@ -817,6 +817,9 @@ function Outro() {
 
         {/* floating queries */}
         <div className="pointer-events-none absolute inset-0 block">
+          {BUBBLES.map((b, i) => (
+            <FloatingBubble key={i} b={b} />
+          ))}
           <svg className="absolute inset-0 hidden h-full w-full md:block" aria-hidden>
             <path
               d="M 50 100 Q 400 40 760 160"
