@@ -273,32 +273,9 @@ function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-10 sm:pt-14 md:pb-24">
-        {/* Big background word à la Cloudflare hero */}
+        {/* Foreground content */}
         <div className="relative">
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-2 hidden md:block">
-            <div
-              className="hero-word select-none text-center text-[clamp(120px,18vw,260px)]"
-              style={{ color: "rgba(37,211,102,0.07)" }}
-            >
-              TaxEasy
-            </div>
-          </div>
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-[28%] hidden md:block">
-            <div
-              className="hero-word select-none text-center text-[clamp(120px,18vw,260px)]"
-              style={{ color: "var(--whatsapp)" }}
-            >
-              TaxEasy
-            </div>
-          </div>
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-[56%] hidden md:block">
-            <div
-              className="hero-word select-none text-center text-[clamp(120px,18vw,260px)]"
-              style={{ color: "rgba(37,211,102,0.07)" }}
-            >
-              TaxEasy
-            </div>
-          </div>
+
 
           {/* floating chat bubbles */}
           <div className="pointer-events-none absolute inset-0 hidden md:block">
