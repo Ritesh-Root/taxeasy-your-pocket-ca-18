@@ -698,9 +698,11 @@ type Bubble = {
   hi?: boolean;
   top: string;
   left: string;
+  mdLeft?: string;
   rot: number;
   delay: number;
   accent?: "teal" | "saffron" | "wa" | "ink";
+  hideOnMobile?: boolean;
 };
 
 const BUBBLES: Bubble[] = [
