@@ -848,13 +848,6 @@ function Outro() {
             <Sparkles className="h-3.5 w-3.5 text-amber-300" />
             Ask anything · in any language
           </div>
-          <h2 className="text-balance text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Start free on WhatsApp{" "}
-            <span style={{ color: "var(--whatsapp)" }}>today</span>.
-          </h2>
-          <p className="font-hi mt-3 text-lg text-amber-300/90 sm:text-xl">
-            आज ही शुरू करें — ₹0 में।
-          </p>
           <div className="mt-8 flex justify-center">
             <WhatsAppBtn size="lg">Start on WhatsApp · ₹0</WhatsAppBtn>
           </div>
