@@ -710,10 +710,10 @@ const BUBBLES: Bubble[] = [
   { text: "Duplicate bill मिला 🚨", hi: true, top: "26%", left: "1%", rot: -3, delay: 1.8, accent: "teal", hideOnMobile: true },
   { text: "Advance tax due date?", top: "52%", left: "2%", rot: 6, delay: 0.3, accent: "ink" },
   { text: "ITR file karna hai", hi: true, top: "82%", left: "3%", rot: 4, delay: 1.5, accent: "saffron", hideOnMobile: true },
-  { text: "नमस्ते TaxEasy 👋", hi: true, top: "4%", left: "62%", rot: 5, delay: 0.6, accent: "saffron", mdLeft: "82%" },
-  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "26%", left: "58%", rot: -4, delay: 1.2, accent: "teal", mdLeft: "82%", hideOnMobile: true },
-  { text: "GSTR-3B reminder", top: "52%", left: "64%", rot: 5, delay: 2.1, accent: "ink", mdLeft: "84%" },
-  { text: "Old vs new regime — kaunsa?", top: "82%", left: "55%", rot: -7, delay: 0.9, accent: "wa", mdLeft: "80%", hideOnMobile: true },
+  { text: "नमस्ते TaxEasy 👋", hi: true, top: "4%", left: "62%", mdLeftClass: "md:left-[82%]", rot: 5, delay: 0.6, accent: "saffron" },
+  { text: "₹48,500 का bill — sahi hai?", hi: true, top: "26%", left: "58%", mdLeftClass: "md:left-[82%]", rot: -4, delay: 1.2, accent: "teal", hideOnMobile: true },
+  { text: "GSTR-3B reminder", top: "52%", left: "64%", mdLeftClass: "md:left-[84%]", rot: 5, delay: 2.1, accent: "ink" },
+  { text: "Old vs new regime — kaunsa?", top: "82%", left: "55%", mdLeftClass: "md:left-[80%]", rot: -7, delay: 0.9, accent: "wa", hideOnMobile: true },
 ];
 
 function bubbleStyle(a: Bubble["accent"]) {
